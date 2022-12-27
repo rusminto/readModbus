@@ -1,0 +1,35 @@
+default config for current motor
+2031=18000 - 10000
+203B:01=6000 - 4000
+203B:02=0
+3202:00=65
+2030=6
+2059=0
+3202=65
+
+
+
+60FF=250 / target velocity
+
+run
+6040=6
+6040=15
+
+off
+6040=0
+
+
+
+-200 : ff ff ff 38
++200 : 00 00 00 c8
+
++1 : 00 00 00 01
+-1 : ff ff ff ff
+-2 : ff ff ff fe
+
+Two's Complement 
+
+
+get velocity = 6044:00, value length = 2
+REQ : 4E 54 00 0F 05 2B 0D 00 00 01 60 44 00 00 00 00 00 FE A8
+RES : 4E 54 00 11 05 2B 0D 00 00 01 60 44 00 00 00 00 02 C8 00 B7 DE
